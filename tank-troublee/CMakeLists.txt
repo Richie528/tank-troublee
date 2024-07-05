@@ -25,7 +25,9 @@ endif()
 
 # Our Project
 add_executable(${PROJECT_NAME})
-add_subdirectory(src)
+target_sources(${PROJECT_NAME} PRIVATE
+  "src/main.cpp"
+) 
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PROJECT_NAME})

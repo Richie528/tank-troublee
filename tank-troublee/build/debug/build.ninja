@@ -18,7 +18,7 @@
 #############################################
 # Minimal version of Ninja required by this file
 
-ninja_required_version = 1.8
+ninja_required_version = 1.5
 
 
 #############################################
@@ -49,53 +49,15 @@ cmake_ninja_workdir = C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-tro
 
 build cmake_object_order_depends_target_tank-troublee: phony || cmake_object_order_depends_target_glfw cmake_object_order_depends_target_raylib
 
-build CMakeFiles/tank-troublee.dir/src/raylib_game.c.obj: C_COMPILER__tank-troublee_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/src/raylib_game.c || cmake_object_order_depends_target_tank-troublee
+build CMakeFiles/tank-troublee.dir/src/main.cpp.obj: CXX_COMPILER__tank-troublee_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/src/main.cpp || cmake_object_order_depends_target_tank-troublee
   DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles\tank-troublee.dir\src\raylib_game.c.obj.d
+  DEP_FILE = CMakeFiles\tank-troublee.dir\src\main.cpp.obj.d
   FLAGS = -g
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include
   OBJECT_DIR = CMakeFiles\tank-troublee.dir
   OBJECT_FILE_DIR = CMakeFiles\tank-troublee.dir\src
-
-build CMakeFiles/tank-troublee.dir/src/screen_ending.c.obj: C_COMPILER__tank-troublee_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/src/screen_ending.c || cmake_object_order_depends_target_tank-troublee
-  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles\tank-troublee.dir\src\screen_ending.c.obj.d
-  FLAGS = -g
-  INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles\tank-troublee.dir
-  OBJECT_FILE_DIR = CMakeFiles\tank-troublee.dir\src
-
-build CMakeFiles/tank-troublee.dir/src/screen_gameplay.c.obj: C_COMPILER__tank-troublee_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/src/screen_gameplay.c || cmake_object_order_depends_target_tank-troublee
-  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles\tank-troublee.dir\src\screen_gameplay.c.obj.d
-  FLAGS = -g
-  INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles\tank-troublee.dir
-  OBJECT_FILE_DIR = CMakeFiles\tank-troublee.dir\src
-
-build CMakeFiles/tank-troublee.dir/src/screen_logo.c.obj: C_COMPILER__tank-troublee_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/src/screen_logo.c || cmake_object_order_depends_target_tank-troublee
-  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles\tank-troublee.dir\src\screen_logo.c.obj.d
-  FLAGS = -g
-  INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles\tank-troublee.dir
-  OBJECT_FILE_DIR = CMakeFiles\tank-troublee.dir\src
-
-build CMakeFiles/tank-troublee.dir/src/screen_options.c.obj: C_COMPILER__tank-troublee_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/src/screen_options.c || cmake_object_order_depends_target_tank-troublee
-  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles\tank-troublee.dir\src\screen_options.c.obj.d
-  FLAGS = -g
-  INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles\tank-troublee.dir
-  OBJECT_FILE_DIR = CMakeFiles\tank-troublee.dir\src
-
-build CMakeFiles/tank-troublee.dir/src/screen_title.c.obj: C_COMPILER__tank-troublee_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/src/screen_title.c || cmake_object_order_depends_target_tank-troublee
-  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles\tank-troublee.dir\src\screen_title.c.obj.d
-  FLAGS = -g
-  INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles\tank-troublee.dir
-  OBJECT_FILE_DIR = CMakeFiles\tank-troublee.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\tank-troublee.dir\
+  TARGET_PDB = tank-troublee\tank-troublee.pdb
 
 
 # =============================================================================
@@ -105,15 +67,16 @@ build CMakeFiles/tank-troublee.dir/src/screen_title.c.obj: C_COMPILER__tank-trou
 #############################################
 # Link the executable tank-troublee\tank-troublee.exe
 
-build tank-troublee/tank-troublee.exe: C_EXECUTABLE_LINKER__tank-troublee_Debug CMakeFiles/tank-troublee.dir/src/raylib_game.c.obj CMakeFiles/tank-troublee.dir/src/screen_ending.c.obj CMakeFiles/tank-troublee.dir/src/screen_gameplay.c.obj CMakeFiles/tank-troublee.dir/src/screen_logo.c.obj CMakeFiles/tank-troublee.dir/src/screen_options.c.obj CMakeFiles/tank-troublee.dir/src/screen_title.c.obj | _deps/raylib-build/raylib/libraylib.a _deps/raylib-build/raylib/external/glfw/src/libglfw3.a || _deps/raylib-build/raylib/external/glfw/src/libglfw3.a _deps/raylib-build/raylib/libraylib.a
+build tank-troublee/tank-troublee.exe: CXX_EXECUTABLE_LINKER__tank-troublee_Debug CMakeFiles/tank-troublee.dir/src/main.cpp.obj | _deps/raylib-build/raylib/libraylib.a _deps/raylib-build/raylib/external/glfw/src/libglfw3.a || _deps/raylib-build/raylib/external/glfw/src/libglfw3.a _deps/raylib-build/raylib/libraylib.a
   FLAGS = -g
   LINK_LIBRARIES = _deps/raylib-build/raylib/libraylib.a  -lopengl32  -lglu32  -lwinmm  _deps/raylib-build/raylib/external/glfw/src/libglfw3.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\tank-troublee.dir
   POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\26YangRI\Desktop\Projects\tank-troublee\tank-troublee\tank-troublee\build\debug && "C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/src/resources C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/tank-troublee/resources"
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\tank-troublee.dir\
   TARGET_FILE = tank-troublee\tank-troublee.exe
   TARGET_IMPLIB = libtank-troublee.dll.a
-  TARGET_PDB = tank-troublee.exe.dbg
+  TARGET_PDB = tank-troublee\tank-troublee.pdb
 
 
 #############################################
@@ -334,6 +297,8 @@ build _deps/raylib-build/raylib/CMakeFiles/raylib.dir/rcore.c.obj: C_COMPILER__r
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -isystem C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include
   OBJECT_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\CMakeFiles\raylib.dir\raylib.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\libraylib.pdb
 
 build _deps/raylib-build/raylib/CMakeFiles/raylib.dir/rmodels.c.obj: C_COMPILER__raylib_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/rmodels.c || cmake_object_order_depends_target_raylib
   DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS
@@ -342,6 +307,8 @@ build _deps/raylib-build/raylib/CMakeFiles/raylib.dir/rmodels.c.obj: C_COMPILER_
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -isystem C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include
   OBJECT_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\CMakeFiles\raylib.dir\raylib.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\libraylib.pdb
 
 build _deps/raylib-build/raylib/CMakeFiles/raylib.dir/rshapes.c.obj: C_COMPILER__raylib_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/rshapes.c || cmake_object_order_depends_target_raylib
   DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS
@@ -350,6 +317,8 @@ build _deps/raylib-build/raylib/CMakeFiles/raylib.dir/rshapes.c.obj: C_COMPILER_
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -isystem C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include
   OBJECT_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\CMakeFiles\raylib.dir\raylib.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\libraylib.pdb
 
 build _deps/raylib-build/raylib/CMakeFiles/raylib.dir/rtext.c.obj: C_COMPILER__raylib_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/rtext.c || cmake_object_order_depends_target_raylib
   DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS
@@ -358,6 +327,8 @@ build _deps/raylib-build/raylib/CMakeFiles/raylib.dir/rtext.c.obj: C_COMPILER__r
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -isystem C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include
   OBJECT_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\CMakeFiles\raylib.dir\raylib.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\libraylib.pdb
 
 build _deps/raylib-build/raylib/CMakeFiles/raylib.dir/rtextures.c.obj: C_COMPILER__raylib_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/rtextures.c || cmake_object_order_depends_target_raylib
   DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS
@@ -366,6 +337,8 @@ build _deps/raylib-build/raylib/CMakeFiles/raylib.dir/rtextures.c.obj: C_COMPILE
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -isystem C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include
   OBJECT_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\CMakeFiles\raylib.dir\raylib.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\libraylib.pdb
 
 build _deps/raylib-build/raylib/CMakeFiles/raylib.dir/utils.c.obj: C_COMPILER__raylib_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/utils.c || cmake_object_order_depends_target_raylib
   DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS
@@ -374,6 +347,8 @@ build _deps/raylib-build/raylib/CMakeFiles/raylib.dir/utils.c.obj: C_COMPILER__r
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -isystem C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include
   OBJECT_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\CMakeFiles\raylib.dir\raylib.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\libraylib.pdb
 
 build _deps/raylib-build/raylib/CMakeFiles/raylib.dir/raudio.c.obj: C_COMPILER__raylib_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/raudio.c || cmake_object_order_depends_target_raylib
   DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS
@@ -382,6 +357,8 @@ build _deps/raylib-build/raylib/CMakeFiles/raylib.dir/raudio.c.obj: C_COMPILER__
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -isystem C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include
   OBJECT_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\CMakeFiles\raylib.dir\raylib.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\libraylib.pdb
 
 
 # =============================================================================
@@ -396,8 +373,9 @@ build _deps/raylib-build/raylib/libraylib.a: C_STATIC_LIBRARY_LINKER__raylib_Deb
   OBJECT_DIR = _deps\raylib-build\raylib\CMakeFiles\raylib.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\CMakeFiles\raylib.dir\raylib.pdb
   TARGET_FILE = _deps\raylib-build\raylib\libraylib.a
-  TARGET_PDB = raylib.a.dbg
+  TARGET_PDB = _deps\raylib-build\raylib\libraylib.pdb
 
 
 #############################################
@@ -605,6 +583,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/context.c.
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/init.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -613,6 +593,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/init.c.obj
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/input.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/input.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -621,6 +603,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/input.c.ob
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -629,6 +613,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/monitor.c.
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/platform.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/platform.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -637,6 +623,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/platform.c
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -645,6 +633,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/window.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -653,6 +643,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/window.c.o
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -661,6 +653,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/egl_contex
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -669,6 +663,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/osmesa_con
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_init.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/null_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -677,6 +673,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_init.
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/null_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -685,6 +683,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_monit
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_window.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/null_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -693,6 +693,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_windo
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/null_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -701,6 +703,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_joyst
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/win32_module.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -709,6 +713,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_modu
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/win32_time.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -717,6 +723,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_time
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/win32_thread.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -725,6 +733,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_thre
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/win32_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -733,6 +743,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_init
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/win32_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -741,6 +753,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_joys
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/win32_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -749,6 +763,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_moni
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/win32_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -757,6 +773,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_wind
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src/wgl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
@@ -765,6 +783,8 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/wgl_contex
   INCLUDES = -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/raylib/external/glfw/src
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 
 # =============================================================================
@@ -779,8 +799,9 @@ build _deps/raylib-build/raylib/external/glfw/src/libglfw3.a: C_STATIC_LIBRARY_L
   OBJECT_DIR = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = _deps\raylib-build\raylib\external\glfw\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_FILE = _deps\raylib-build\raylib\external\glfw\src\libglfw3.a
-  TARGET_PDB = glfw3.a.dbg
+  TARGET_PDB = _deps\raylib-build\raylib\external\glfw\src\libglfw3.pdb
 
 
 #############################################
@@ -887,101 +908,6 @@ build _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/update_mappings | $
   DESC = Updating gamepad mappings from upstream repository
 
 # =============================================================================
-# Write statements declared in CMakeLists.txt:
-# C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/CMakeLists.txt
-# =============================================================================
-
-
-#############################################
-# Utility command for package
-
-build src/CMakeFiles/package.util: CUSTOM_COMMAND src/all
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\26YangRI\Desktop\Projects\tank-troublee\tank-troublee\tank-troublee\build\debug && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackConfig.cmake"
-  DESC = Run CPack packaging tool...
-  pool = console
-  restat = 1
-
-build src/package: phony src/CMakeFiles/package.util
-
-
-#############################################
-# Utility command for package_source
-
-build src/CMakeFiles/package_source.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\26YangRI\Desktop\Projects\tank-troublee\tank-troublee\tank-troublee\build\debug && "C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/CPackSourceConfig.cmake"
-  DESC = Run CPack packaging tool for source...
-  pool = console
-  restat = 1
-
-build src/package_source: phony src/CMakeFiles/package_source.util
-
-
-#############################################
-# Utility command for edit_cache
-
-build src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\26YangRI\Desktop\Projects\tank-troublee\tank-troublee\tank-troublee\build\debug\src && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\26YangRI\Desktop\Projects\tank-troublee\tank-troublee\tank-troublee -BC:\Users\26YangRI\Desktop\Projects\tank-troublee\tank-troublee\tank-troublee\build\debug"
-  DESC = Running CMake cache editor...
-  pool = console
-  restat = 1
-
-build src/edit_cache: phony src/CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\26YangRI\Desktop\Projects\tank-troublee\tank-troublee\tank-troublee\build\debug\src && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\26YangRI\Desktop\Projects\tank-troublee\tank-troublee\tank-troublee -BC:\Users\26YangRI\Desktop\Projects\tank-troublee\tank-troublee\tank-troublee\build\debug"
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build src/rebuild_cache: phony src/CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for list_install_components
-
-build src/list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build src/CMakeFiles/install.util: CUSTOM_COMMAND src/all
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\26YangRI\Desktop\Projects\tank-troublee\tank-troublee\tank-troublee\build\debug\src && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build src/install: phony src/CMakeFiles/install.util
-
-
-#############################################
-# Utility command for install/local
-
-build src/CMakeFiles/install/local.util: CUSTOM_COMMAND src/all
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\26YangRI\Desktop\Projects\tank-troublee\tank-troublee\tank-troublee\build\debug\src && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build src/install/local: phony src/CMakeFiles/install/local.util
-
-
-#############################################
-# Utility command for install/strip
-
-build src/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/all
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\26YangRI\Desktop\Projects\tank-troublee\tank-troublee\tank-troublee\build\debug\src && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
-  DESC = Installing the project stripped...
-  pool = console
-  restat = 1
-
-build src/install/strip: phony src/CMakeFiles/install/strip.util
-
-# =============================================================================
 # Target aliases.
 
 build glfw: phony _deps/raylib-build/raylib/external/glfw/src/libglfw3.a
@@ -1008,7 +934,7 @@ build update_mappings: phony _deps/raylib-build/raylib/external/glfw/src/update_
 #############################################
 # Folder: C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug
 
-build all: phony tank-troublee/tank-troublee.exe _deps/raylib-build/all src/all
+build all: phony tank-troublee/tank-troublee.exe _deps/raylib-build/all
 
 # =============================================================================
 
@@ -1039,41 +965,20 @@ build _deps/raylib-build/raylib/external/glfw/all: phony _deps/raylib-build/rayl
 build _deps/raylib-build/raylib/external/glfw/src/all: phony _deps/raylib-build/raylib/external/glfw/src/libglfw3.a
 
 # =============================================================================
-
-#############################################
-# Folder: C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/src
-
-build src/all: phony
-
-# =============================================================================
 # Built-in targets
-
-
-#############################################
-# Phony target to force glob verification run.
-
-build C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/CMakeFiles/VerifyGlobs.cmake_force: phony
-
-
-#############################################
-# Re-run CMake to check if globbed directories changed.
-
-build C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/CMakeFiles/cmake.verify_globs: VERIFY_GLOBS | C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/CMakeFiles/VerifyGlobs.cmake_force
-  pool = console
-  restat = 1
 
 
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/CMakeFiles/cmake.verify_globs | C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/CMakeFiles/VerifyGlobs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CPack.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CPackComponent.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/ExternalProject/shared_internal_commands.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FetchContent.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FetchContent/CMakeLists.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Templates/CPackConfig.cmake.in C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/CMakeLists.txt C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/src/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.0/CMakeCCompiler.cmake CMakeFiles/3.30.0/CMakeCXXCompiler.cmake CMakeFiles/3.30.0/CMakeRCCompiler.cmake CMakeFiles/3.30.0/CMakeSystem.cmake _deps/raylib-src/CMakeLists.txt _deps/raylib-src/CMakeOptions.txt _deps/raylib-src/cmake/AddIfFlagCompiles.cmake _deps/raylib-src/cmake/BuildOptions.cmake _deps/raylib-src/cmake/CompileDefinitions.cmake _deps/raylib-src/cmake/CompilerFlags.cmake _deps/raylib-src/cmake/EnumOption.cmake _deps/raylib-src/cmake/GlfwImport.cmake _deps/raylib-src/cmake/InstallConfigurations.cmake _deps/raylib-src/cmake/JoinPaths.cmake _deps/raylib-src/cmake/LibraryConfigurations.cmake _deps/raylib-src/cmake/LibraryPathToLinkerFlags.cmake _deps/raylib-src/cmake/PackConfigurations.cmake _deps/raylib-src/cmake/PopulateConfigVariablesLocally.cmake _deps/raylib-src/cmake/Uninstall.cmake _deps/raylib-src/cmake/raylib-config-version.cmake _deps/raylib-src/raylib.pc.in _deps/raylib-src/src/CMakeLists.txt _deps/raylib-src/src/external/glfw/CMakeLists.txt _deps/raylib-src/src/external/glfw/CMake/glfw3.pc.in _deps/raylib-src/src/external/glfw/CMake/glfw3Config.cmake.in _deps/raylib-src/src/external/glfw/src/CMakeLists.txt
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CPack.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CPackComponent.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/ExternalProject/shared_internal_commands.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FetchContent.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FetchContent/CMakeLists.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Templates/CPackConfig.cmake.in C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.0/CMakeCCompiler.cmake CMakeFiles/3.30.0/CMakeCXXCompiler.cmake CMakeFiles/3.30.0/CMakeRCCompiler.cmake CMakeFiles/3.30.0/CMakeSystem.cmake _deps/raylib-src/CMakeLists.txt _deps/raylib-src/CMakeOptions.txt _deps/raylib-src/cmake/AddIfFlagCompiles.cmake _deps/raylib-src/cmake/BuildOptions.cmake _deps/raylib-src/cmake/CompileDefinitions.cmake _deps/raylib-src/cmake/CompilerFlags.cmake _deps/raylib-src/cmake/EnumOption.cmake _deps/raylib-src/cmake/GlfwImport.cmake _deps/raylib-src/cmake/InstallConfigurations.cmake _deps/raylib-src/cmake/JoinPaths.cmake _deps/raylib-src/cmake/LibraryConfigurations.cmake _deps/raylib-src/cmake/LibraryPathToLinkerFlags.cmake _deps/raylib-src/cmake/PackConfigurations.cmake _deps/raylib-src/cmake/PopulateConfigVariablesLocally.cmake _deps/raylib-src/cmake/Uninstall.cmake _deps/raylib-src/cmake/raylib-config-version.cmake _deps/raylib-src/raylib.pc.in _deps/raylib-src/src/CMakeLists.txt _deps/raylib-src/src/external/glfw/CMakeLists.txt _deps/raylib-src/src/external/glfw/CMake/glfw3.pc.in _deps/raylib-src/src/external/glfw/CMake/glfw3Config.cmake.in _deps/raylib-src/src/external/glfw/src/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/CMakeFiles/VerifyGlobs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CPack.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CPackComponent.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/ExternalProject/shared_internal_commands.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FetchContent.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FetchContent/CMakeLists.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Templates/CPackConfig.cmake.in C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/CMakeLists.txt C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/src/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.0/CMakeCCompiler.cmake CMakeFiles/3.30.0/CMakeCXXCompiler.cmake CMakeFiles/3.30.0/CMakeRCCompiler.cmake CMakeFiles/3.30.0/CMakeSystem.cmake _deps/raylib-src/CMakeLists.txt _deps/raylib-src/CMakeOptions.txt _deps/raylib-src/cmake/AddIfFlagCompiles.cmake _deps/raylib-src/cmake/BuildOptions.cmake _deps/raylib-src/cmake/CompileDefinitions.cmake _deps/raylib-src/cmake/CompilerFlags.cmake _deps/raylib-src/cmake/EnumOption.cmake _deps/raylib-src/cmake/GlfwImport.cmake _deps/raylib-src/cmake/InstallConfigurations.cmake _deps/raylib-src/cmake/JoinPaths.cmake _deps/raylib-src/cmake/LibraryConfigurations.cmake _deps/raylib-src/cmake/LibraryPathToLinkerFlags.cmake _deps/raylib-src/cmake/PackConfigurations.cmake _deps/raylib-src/cmake/PopulateConfigVariablesLocally.cmake _deps/raylib-src/cmake/Uninstall.cmake _deps/raylib-src/cmake/raylib-config-version.cmake _deps/raylib-src/raylib.pc.in _deps/raylib-src/src/CMakeLists.txt _deps/raylib-src/src/external/glfw/CMakeLists.txt _deps/raylib-src/src/external/glfw/CMake/glfw3.pc.in _deps/raylib-src/src/external/glfw/CMake/glfw3Config.cmake.in _deps/raylib-src/src/external/glfw/src/CMakeLists.txt: phony
+build C$:/Program$ Files/CMake/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CPack.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CPackComponent.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/ExternalProject/shared_internal_commands.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FetchContent.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FetchContent/CMakeLists.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Templates/CPackConfig.cmake.in C$:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.0/CMakeCCompiler.cmake CMakeFiles/3.30.0/CMakeCXXCompiler.cmake CMakeFiles/3.30.0/CMakeRCCompiler.cmake CMakeFiles/3.30.0/CMakeSystem.cmake _deps/raylib-src/CMakeLists.txt _deps/raylib-src/CMakeOptions.txt _deps/raylib-src/cmake/AddIfFlagCompiles.cmake _deps/raylib-src/cmake/BuildOptions.cmake _deps/raylib-src/cmake/CompileDefinitions.cmake _deps/raylib-src/cmake/CompilerFlags.cmake _deps/raylib-src/cmake/EnumOption.cmake _deps/raylib-src/cmake/GlfwImport.cmake _deps/raylib-src/cmake/InstallConfigurations.cmake _deps/raylib-src/cmake/JoinPaths.cmake _deps/raylib-src/cmake/LibraryConfigurations.cmake _deps/raylib-src/cmake/LibraryPathToLinkerFlags.cmake _deps/raylib-src/cmake/PackConfigurations.cmake _deps/raylib-src/cmake/PopulateConfigVariablesLocally.cmake _deps/raylib-src/cmake/Uninstall.cmake _deps/raylib-src/cmake/raylib-config-version.cmake _deps/raylib-src/raylib.pc.in _deps/raylib-src/src/CMakeLists.txt _deps/raylib-src/src/external/glfw/CMakeLists.txt _deps/raylib-src/src/external/glfw/CMake/glfw3.pc.in _deps/raylib-src/src/external/glfw/CMake/glfw3Config.cmake.in _deps/raylib-src/src/external/glfw/src/CMakeLists.txt: phony
 
 
 #############################################

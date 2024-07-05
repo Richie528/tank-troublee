@@ -40,7 +40,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-build/cmake_install.cmake")
-  include("C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/src/cmake_install.cmake")
 
 endif()
 

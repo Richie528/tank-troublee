@@ -1,39 +1,9 @@
 [
 {
   "directory": "C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug",
-  "command": "C:\\Users\\26YangRI\\scoop\\apps\\gcc\\current\\bin\\gcc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -g -o CMakeFiles\\tank-troublee.dir\\src\\raylib_game.c.obj -c C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\raylib_game.c",
-  "file": "C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\raylib_game.c",
-  "output": "CMakeFiles\\tank-troublee.dir\\src\\raylib_game.c.obj"
-},
-{
-  "directory": "C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug",
-  "command": "C:\\Users\\26YangRI\\scoop\\apps\\gcc\\current\\bin\\gcc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -g -o CMakeFiles\\tank-troublee.dir\\src\\screen_ending.c.obj -c C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\screen_ending.c",
-  "file": "C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\screen_ending.c",
-  "output": "CMakeFiles\\tank-troublee.dir\\src\\screen_ending.c.obj"
-},
-{
-  "directory": "C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug",
-  "command": "C:\\Users\\26YangRI\\scoop\\apps\\gcc\\current\\bin\\gcc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -g -o CMakeFiles\\tank-troublee.dir\\src\\screen_gameplay.c.obj -c C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\screen_gameplay.c",
-  "file": "C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\screen_gameplay.c",
-  "output": "CMakeFiles\\tank-troublee.dir\\src\\screen_gameplay.c.obj"
-},
-{
-  "directory": "C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug",
-  "command": "C:\\Users\\26YangRI\\scoop\\apps\\gcc\\current\\bin\\gcc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -g -o CMakeFiles\\tank-troublee.dir\\src\\screen_logo.c.obj -c C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\screen_logo.c",
-  "file": "C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\screen_logo.c",
-  "output": "CMakeFiles\\tank-troublee.dir\\src\\screen_logo.c.obj"
-},
-{
-  "directory": "C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug",
-  "command": "C:\\Users\\26YangRI\\scoop\\apps\\gcc\\current\\bin\\gcc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -g -o CMakeFiles\\tank-troublee.dir\\src\\screen_options.c.obj -c C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\screen_options.c",
-  "file": "C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\screen_options.c",
-  "output": "CMakeFiles\\tank-troublee.dir\\src\\screen_options.c.obj"
-},
-{
-  "directory": "C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug",
-  "command": "C:\\Users\\26YangRI\\scoop\\apps\\gcc\\current\\bin\\gcc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -g -o CMakeFiles\\tank-troublee.dir\\src\\screen_title.c.obj -c C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\screen_title.c",
-  "file": "C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\screen_title.c",
-  "output": "CMakeFiles\\tank-troublee.dir\\src\\screen_title.c.obj"
+  "command": "C:\\Users\\26YangRI\\scoop\\apps\\gcc\\current\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src -IC:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug/_deps/raylib-src/src/external/glfw/include -g -o CMakeFiles\\tank-troublee.dir\\src\\main.cpp.obj -c C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\main.cpp",
+  "file": "C:\\Users\\26YangRI\\Desktop\\Projects\\tank-troublee\\tank-troublee\\tank-troublee\\src\\main.cpp",
+  "output": "CMakeFiles\\tank-troublee.dir\\src\\main.cpp.obj"
 },
 {
   "directory": "C:/Users/26YangRI/Desktop/Projects/tank-troublee/tank-troublee/tank-troublee/build/debug",
