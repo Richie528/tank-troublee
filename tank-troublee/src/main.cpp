@@ -4,6 +4,10 @@
 int screenWidth = 808;
 int screenHeight = 808;
 
+Color wallColour = {50, 50, 50, 255};
+Color gridColourA = {240, 240, 240, 255};
+Color gridColourB = {220, 220, 220, 255};
+
 int map[8][8];
 int wallsY[8][9];
 int wallsX[9][8];
@@ -47,9 +51,9 @@ int generateMap() {
     }
     for (int i = 1; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
-            int a = j * 8 + i - 1;
-            int b = j * 8 + i;
-            if (wallsY[i][j]) edges.push_back({a, b});
+            int a = (i - 1) * 8 + j;
+            int b = i * 8 + j;
+            if (wallsX[i][j]) edges.push_back({a, b});
             else dsu[leader(a)] = leader(b);
         }
     }
@@ -58,11 +62,16 @@ int generateMap() {
         int a = edge.first;
         int b = edge.second;
         if (leader(a) != leader(b)) {
-            /*
-            
-            REMOVE THE WALL BETWEEN A AND B SOMEHOW
-            
-            */
+            int ai = a / 8, aj = a % 8;
+            int bi = b / 8, bj = b % 8;
+            // Vertical Wall
+            if (bj - aj == 1) {
+                wallsY[bi][bj] = 0;
+            }
+            // Horizontal Wall
+            if (bi - ai == 1) {
+                wallsX[bi][bj] = 0;
+            }
             dsu[leader(a)] = leader(b);
         }
     }
@@ -97,8 +106,19 @@ int generateMap() {
 }
 
 int drawMap() {
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            DrawRectangle(
+                f(i * 100),
+                f(j * 100),
+                f(100),
+                f(100),
+                ((i + j) % 2) ? gridColourA : gridColourB
+            );
+        }
+    }
     for (Rectangle wall : walls) {
-        DrawRectangleRec(wall, RED);
+        DrawRectangleRec(wall, wallColour);
     }
     return 0;
 }
