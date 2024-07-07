@@ -17,7 +17,7 @@ private:
     int shoot();
 
 public:
-    Tank(float posX, float posY, float rotation, Color colour);
+    Tank(float posX, float posY, float rotation, Color colour, std::vector<int> inputKeys);
     const std::vector<Rectangle> *getBody();
     int run();
     int draw();

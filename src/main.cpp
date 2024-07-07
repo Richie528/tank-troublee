@@ -6,9 +6,10 @@
 
 int screenWidth = 808;
 int screenHeight = 808;
+float f(int x) {return float(x + 3);}
 
 Map map;
-Tank tank(50, 50, 90, RED);
+Tank tank(f(150), f(150), f(0), RED, {KEY_W, KEY_S, KEY_A, KEY_D, KEY_Q});
 
 int draw() {
     BeginDrawing();
