@@ -1,8 +1,12 @@
 #include "tank.hpp"
 #include "action.hpp"
 
+float rad(float x) {
+    return x * PI / 180;
+}
+
 Tank::Tank(float posX, float posY, float rot, Color col, std::vector<int> inputKeys) : rotation(rot), colour(col) {
-    pos = Vector2{-posX, -posY};
+    pos = Vector2{posX, posY};
 
     actionKeys[Action::forward] = inputKeys[0];
     actionKeys[Action::backward] = inputKeys[1];
@@ -11,7 +15,7 @@ Tank::Tank(float posX, float posY, float rot, Color col, std::vector<int> inputK
     actionKeys[Action::shoot] = inputKeys[4];
 
     body = {
-        Rectangle{-20, -30, 40, 60}
+        Rectangle{-15, -20, 30, 40}
     };
 }
 
@@ -19,21 +23,30 @@ const std::vector<Rectangle> *Tank::getBody() {
     return &body;
 }
 
+int Tank::updateBody() {
+    body.clear();
+    body = {
+        Rectangle{-15 + pos.x, -20 + pos.y, 30, 40}
+    };
+
+    return 0;
+}
+
 int Tank::move() {
     float move = IsKeyDown(actionKeys[Action::forward]) - IsKeyDown(actionKeys[Action::backward]);
     float rotate = IsKeyDown(actionKeys[Action::right]) - IsKeyDown(actionKeys[Action::left]);
 
-    pos.x += move * sin(rotation);
-    pos.y += move * cos(rotation);
+    pos.x += moveSpeed * move * sin(rad(rotation));
+    pos.y += -moveSpeed * move * cos(rad(rotation));
+    updateBody();
 
-    rotation += rotate;
+    rotation = std::fmod((rotation + (rotate * rotateSpeed) + 360), 360);
 
     return 0;
 }
 
 int Tank::shoot() {
     if (IsKeyDown(actionKeys[Action::shoot])) {
-        std::cout << "shoot\n";
         // shoot
     }
     return 0;
@@ -46,11 +59,8 @@ int Tank::run() {
 }
 
 int Tank::draw() {
-    std::cout << "draw\n";
     for (Rectangle bodyPart : body) {
-        DrawRectanglePro(bodyPart, pos, rotation, colour);
-        DrawRectanglePro(Rectangle{0, 0, 50, 50}, Vector2{150, 150}, float(0), RED);
-        DrawRectangle(250, 250, 100, 100, RED);
+        DrawRectanglePro(bodyPart, Vector2{15, 20}, rotation, colour);
     }
     return 0;
 }

@@ -4,6 +4,9 @@
 #include "raylib.h"
 #include "action.hpp"
 
+const float moveSpeed = 1;
+const float rotateSpeed = 1.6;
+
 class Tank {
 private:
     Color colour;
@@ -13,6 +16,7 @@ private:
     std::vector<Rectangle> body;
     std::map<Action, int> actionKeys;
 
+    int updateBody();
     int move();
     int shoot();
 
