@@ -96,6 +96,10 @@ int Map::generate() {
             }
         }
     }
+    // Create physics bodies
+    for (Rectangle wall : walls) {
+        CreatePhysicsBodyRectangle(Vector2{wall.x, wall.y}, wall.width, wall.height, 10);
+    }
     return 0;
 }
 

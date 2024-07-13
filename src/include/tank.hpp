@@ -2,10 +2,12 @@
 
 #include <bits/stdc++.h>
 #include "raylib.h"
+#include "physac.h"
 #include "action.hpp"
 
-const float moveSpeed = 1;
-const float rotateSpeed = 1.6;
+const float moveSpeed = 2;
+const float rotateSpeed = 2.5;
+const Color tankPartsColor = {70, 70, 70, 255};
 
 class Tank {
 private:

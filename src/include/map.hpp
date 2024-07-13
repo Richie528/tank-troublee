@@ -2,6 +2,7 @@
 
 #include <bits/stdc++.h>
 #include "raylib.h"
+#include "physac.h"
 
 const Color wallColour = {50, 50, 50, 255};
 const Color gridColourA = {240, 240, 240, 255};

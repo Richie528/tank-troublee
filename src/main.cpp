@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
 #include "raylib.h"
+#define PHYSAC_IMPLEMENTATION
+#include "physac.h"
+
 #include "map.hpp"
 #include "tank.hpp"
 #include "bullet.hpp"
@@ -9,7 +12,7 @@ int screenHeight = 808;
 float f(int x) {return float(x + 3);}
 
 Map map;
-Tank tank(f(150), f(150), float(0), RED, {KEY_W, KEY_S, KEY_A, KEY_D, KEY_Q});
+Tank tank = Tank(f(150), f(150), float(0), RED, {KEY_W, KEY_S, KEY_A, KEY_D, KEY_Q});
 
 int draw() {
     BeginDrawing();
@@ -24,6 +27,7 @@ int draw() {
 
 int main() {
     InitWindow(screenWidth, screenHeight, "Tank Troublee");
+    InitPhysics();
     SetTargetFPS(60);
 
     map.generate();
@@ -32,6 +36,7 @@ int main() {
         draw();
     }
 
+    ClosePhysics();
     CloseWindow();        
     return 0;
 }

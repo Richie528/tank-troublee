@@ -15,7 +15,8 @@ Tank::Tank(float posX, float posY, float rot, Color col, std::vector<int> inputK
     actionKeys[Action::shoot] = inputKeys[4];
 
     body = {
-        Rectangle{-15, -20, 30, 40}
+        Rectangle{0, 0, 30, 40},
+        Rectangle{10, 20, 10, 10}
     };
 }
 
@@ -26,7 +27,8 @@ const std::vector<Rectangle> *Tank::getBody() {
 int Tank::updateBody() {
     body.clear();
     body = {
-        Rectangle{-15 + pos.x, -20 + pos.y, 30, 40}
+        Rectangle{pos.x, pos.y, 30, 40},
+        Rectangle{pos.x + 10, pos.y + 25, 10, 10}
     };
 
     return 0;
@@ -60,7 +62,7 @@ int Tank::run() {
 
 int Tank::draw() {
     for (Rectangle bodyPart : body) {
-        DrawRectanglePro(bodyPart, Vector2{15, 20}, rotation, colour);
+        DrawRectanglePro(bodyPart, Vector2{bodyPart.width / 2, bodyPart.height / 2}, rotation, colour);
     }
     return 0;
 }
