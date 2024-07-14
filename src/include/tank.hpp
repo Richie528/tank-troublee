@@ -5,9 +5,10 @@
 #include "physac.h"
 #include "action.hpp"
 
-const float moveSpeed = 2;
+const float moveSpeed = 100;
 const float rotateSpeed = 2.5;
-const Color tankPartsColor = {70, 70, 70, 255};
+const int tankWidth = 30;
+const int tankHeight = 40;
 
 class Tank {
 private:
@@ -15,7 +16,8 @@ private:
     Vector2 pos;
     float rotation;
     int ammo;
-    std::vector<Rectangle> body;
+    std::vector<Rectangle> tankRects;
+    PhysicsBody tankBody;
     std::map<Action, int> actionKeys;
 
     int updateBody();
@@ -24,7 +26,8 @@ private:
 
 public:
     Tank(float posX, float posY, float rotation, Color colour, std::vector<int> inputKeys);
-    const std::vector<Rectangle> *getBody();
+    const std::vector<Rectangle> *getTankRects();
+    const PhysicsBody *getTankBody();
     int run();
     int draw();
 };

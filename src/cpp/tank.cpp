@@ -7,42 +7,36 @@ float rad(float x) {
 
 Tank::Tank(float posX, float posY, float rot, Color col, std::vector<int> inputKeys) : rotation(rot), colour(col) {
     pos = Vector2{posX, posY};
+    tankBody = CreatePhysicsBodyRectangle(Vector2{pos.x, pos.y}, tankWidth, tankHeight, 10);
+    SetPhysicsBodyRotation(tankBody, rad(rotation));
 
-    actionKeys[Action::forward] = inputKeys[0];
+    actionKeys[Action::forward] = inputKeys[0]; 
     actionKeys[Action::backward] = inputKeys[1];
     actionKeys[Action::left] = inputKeys[2];
     actionKeys[Action::right] = inputKeys[3];
     actionKeys[Action::shoot] = inputKeys[4];
-
-    body = {
-        Rectangle{0, 0, 30, 40},
-        Rectangle{10, 20, 10, 10}
-    };
 }
 
-const std::vector<Rectangle> *Tank::getBody() {
-    return &body;
+const std::vector<Rectangle> *Tank::getTankRects() {
+    return &tankRects;
+}
+
+const PhysicsBody *Tank::getTankBody() {
+    return &tankBody;
 }
 
 int Tank::updateBody() {
-    body.clear();
-    body = {
-        Rectangle{pos.x, pos.y, 30, 40},
-        Rectangle{pos.x + 10, pos.y + 25, 10, 10}
-    };
-
     return 0;
 }
 
 int Tank::move() {
-    float move = IsKeyDown(actionKeys[Action::forward]) - IsKeyDown(actionKeys[Action::backward]);
-    float rotate = IsKeyDown(actionKeys[Action::right]) - IsKeyDown(actionKeys[Action::left]);
+    float move = moveSpeed * (IsKeyDown(actionKeys[Action::forward]) - IsKeyDown(actionKeys[Action::backward]));
+    float rotate = rotateSpeed * (IsKeyDown(actionKeys[Action::right]) - IsKeyDown(actionKeys[Action::left]));
 
-    pos.x += moveSpeed * move * sin(rad(rotation));
-    pos.y += -moveSpeed * move * cos(rad(rotation));
-    updateBody();
+    rotation = std::fmod(rotation + rotate, 360);
+    SetPhysicsBodyRotation(tankBody, rad(rotation));
 
-    rotation = std::fmod((rotation + (rotate * rotateSpeed) + 360), 360);
+    PhysicsAddTorque(tankBody, move);
 
     return 0;
 }
@@ -61,8 +55,14 @@ int Tank::run() {
 }
 
 int Tank::draw() {
-    for (Rectangle bodyPart : body) {
-        DrawRectanglePro(bodyPart, Vector2{bodyPart.width / 2, bodyPart.height / 2}, rotation, colour);
+    if (tankBody == NULL) return 0;
+    for (int j = 0; j < 4; j++) {
+        DrawLineEx(
+            GetPhysicsShapeVertex(tankBody, j),
+            GetPhysicsShapeVertex(tankBody, (j + 1) % 4),
+            2,
+            colour
+        );
     }
     return 0;
 }
