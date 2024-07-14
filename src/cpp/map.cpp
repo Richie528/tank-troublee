@@ -122,5 +122,8 @@ int Map::draw() {
     for (Rectangle wall : wallRects) {
         DrawRectangleRec(wall, wallColour);
     }
+    for (PhysicsBody body : wallBodies) {
+        body->enabled = false;
+    }
     return 0;
 }

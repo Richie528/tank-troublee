@@ -25,10 +25,6 @@ const PhysicsBody *Tank::getTankBody() {
     return &tankBody;
 }
 
-int Tank::updateBody() {
-    return 0;
-}
-
 int Tank::move() {
     float move = moveSpeed * (IsKeyDown(actionKeys[Action::forward]) - IsKeyDown(actionKeys[Action::backward]));
     float rotate = rotateSpeed * (IsKeyDown(actionKeys[Action::right]) - IsKeyDown(actionKeys[Action::left]));
@@ -36,15 +32,30 @@ int Tank::move() {
     rotation = std::fmod(rotation + rotate, 360);
     SetPhysicsBodyRotation(tankBody, rad(rotation));
 
-    PhysicsAddTorque(tankBody, move);
+    int x = move * sin(rad(rotation));
+    int y = -move * cos(rad(rotation));
+    tankBody->velocity.x = x;
+    tankBody->velocity.y = y;
+
+    std::cout << x << " " << y << "\n";
+
+    // PhysicsAddForce(tankBody, Vector2{move, 0});
 
     return 0;
 }
 
 int Tank::shoot() {
     if (IsKeyDown(actionKeys[Action::shoot])) {
-        // shoot
+        die();
     }
+    return 0;
+}
+
+int Tank::die() {
+    if (tankBody == NULL) return 0;
+    PhysicsShatter(tankBody, tankBody->position, 10000);
+    DestroyPhysicsBody(tankBody);
+    std::cout << "died\n";
     return 0;
 }
 

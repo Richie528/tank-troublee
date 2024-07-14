@@ -29,7 +29,7 @@ int main() {
         EndDrawing();
     }
 
-    CloseWindow();
     ClosePhysics();
+    CloseWindow();
     return 0;
 }

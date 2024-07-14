@@ -20,9 +20,9 @@ private:
     PhysicsBody tankBody;
     std::map<Action, int> actionKeys;
 
-    int updateBody();
     int move();
     int shoot();
+    int die();
 
 public:
     Tank(float posX, float posY, float rotation, Color colour, std::vector<int> inputKeys);
