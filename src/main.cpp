@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #include "raylib.h"
-#define PHYSAC_IMPLEMENTATION
 #include "physac.h"
 
 #include "map.hpp"
@@ -37,6 +36,6 @@ int main() {
     }
 
     ClosePhysics();
-    CloseWindow();        
+    CloseWindow();
     return 0;
 }

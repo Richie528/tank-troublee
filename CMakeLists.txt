@@ -23,6 +23,10 @@ if (NOT raylib_FOUND) # If there's none, fetch and build raylib
   endif()
 endif()
 
+add_library(physac "physac/physac.c")
+target_include_directories(physac PRIVATE "physac/")
+target_link_libraries(physac PRIVATE raylib)
+
 # Our Project
 add_executable(${PROJECT_NAME})
 target_sources(${PROJECT_NAME} PRIVATE
@@ -34,6 +38,7 @@ target_sources(${PROJECT_NAME} PRIVATE
 
 target_include_directories(${PROJECT_NAME} PRIVATE
   "src/include"
+  "physac/"
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
@@ -44,7 +49,7 @@ add_custom_command(
 	COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/src/resources $<TARGET_FILE_DIR:${PROJECT_NAME}>/resources
 	DEPENDS ${PROJECT_NAME})
 
-target_link_libraries(${PROJECT_NAME} raylib)
+target_link_libraries(${PROJECT_NAME} raylib physac)
 
 # Web Configurations
 if (${PLATFORM} STREQUAL "Web")

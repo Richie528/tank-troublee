@@ -15,14 +15,16 @@ private:
     int wallsX[9][8];
     int dsu[69];
     std::vector<std::pair<int, int>> edges;
-    std::vector<Rectangle> walls;
+    std::vector<Rectangle> wallRects;
+    std::vector<PhysicsBody> wallBodies;
 
     float f(int x);
     int leader(int x);
 
 public:
     Map();
-    const std::vector<Rectangle> *getWalls();
+    const std::vector<Rectangle> *getWallRects();
+    const std::vector<PhysicsBody> *getWallBodies();
     int generate();
     int draw();
 };

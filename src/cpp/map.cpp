@@ -4,8 +4,12 @@ Map::Map() {
     
 }
 
-const std::vector<Rectangle> *Map::getWalls() {
-    return &walls;
+const std::vector<Rectangle> *Map::getWallRects() {
+    return &wallRects;
+}
+
+const std::vector<PhysicsBody> *Map::getWallBodies() {
+    return &wallBodies;
 }
 
 float Map::f(int x) {
@@ -79,7 +83,7 @@ int Map::generate() {
                     f(6), 
                     f(106)
                 };
-                walls.push_back(newWall);
+                wallRects.push_back(newWall);
             }
         }
     }
@@ -92,13 +96,13 @@ int Map::generate() {
                     f(106), 
                     f(6)
                 };
-                walls.push_back(newWall);
+                wallRects.push_back(newWall);
             }
         }
     }
     // Create physics bodies
-    for (Rectangle wall : walls) {
-        CreatePhysicsBodyRectangle(Vector2{wall.x, wall.y}, wall.width, wall.height, 10);
+    for (Rectangle wall : wallRects) {
+        wallBodies.push_back(CreatePhysicsBodyRectangle(Vector2{wall.x, wall.y}, wall.width, wall.height, 10));
     }
     return 0;
 }
@@ -115,7 +119,7 @@ int Map::draw() {
             );
         }
     }
-    for (Rectangle wall : walls) {
+    for (Rectangle wall : wallRects) {
         DrawRectangleRec(wall, wallColour);
     }
     return 0;
