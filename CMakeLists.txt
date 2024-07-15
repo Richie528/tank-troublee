@@ -39,7 +39,6 @@ add_git_dependency(
 add_executable(${PROJECT_NAME})
 target_sources(${PROJECT_NAME} PRIVATE
   "src/main.cpp"
-  "src/cpp/physics.cpp"
   "src/cpp/map.cpp"
   "src/cpp/tank.cpp"
   "src/cpp/bullet.cpp"

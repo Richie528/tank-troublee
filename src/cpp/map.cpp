@@ -8,6 +8,10 @@ const std::vector<Rectangle> *Map::getWallRects() {
     return &wallRects;
 }
 
+const std::vector<b2Body*> *Map::getWallBodies() {
+    return &wallBodies;
+}
+
 float Map::f(int x) {
     return float(x + 3);
 }
@@ -17,7 +21,7 @@ int Map::leader(int x) {
     return dsu[x] = leader(dsu[x]);
 }
 
-int Map::generate() {
+int Map::generate(b2World* world) {
     // Generate map randomly
     std::srand(std::time(nullptr));
     for (int i = 0; i < 8; i++) {
@@ -99,8 +103,15 @@ int Map::generate() {
     // Create physcis bodies
     for (Rectangle wallRect : wallRects) {
         b2BodyDef wallBodyDef;
-        wallBodyDef.position.Set(wallRect.x, wallRect.y);
-        b2Body* wallBody = world.CreateBody(&wallBodyDef);
+        wallBodyDef.position.Set(wallRect.x + wallRect.width / 2, wallRect.y + wallRect.height / 2);
+
+        b2Body* wallBody = world->CreateBody(&wallBodyDef);
+
+        b2PolygonShape wallBox;
+        wallBox.SetAsBox(wallRect.width, wallRect.height);
+        
+        wallBody->CreateFixture(&wallBox, 0.0f);
+        wallBodies.push_back(wallBody);
     }
     return 0;
 }
