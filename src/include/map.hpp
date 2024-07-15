@@ -2,7 +2,7 @@
 
 #include <bits/stdc++.h>
 #include "raylib.h"
-#include "physac.h"
+#include "box2d/box2d.h"
 
 const Color wallColour = {50, 50, 50, 255};
 const Color gridColourA = {240, 240, 240, 255};
@@ -16,7 +16,7 @@ private:
     int dsu[69];
     std::vector<std::pair<int, int>> edges;
     std::vector<Rectangle> wallRects;
-    std::vector<PhysicsBody> wallBodies;
+    std::vector<b2Body> wallBodies;
 
     float f(int x);
     int leader(int x);
@@ -24,7 +24,7 @@ private:
 public:
     Map();
     const std::vector<Rectangle> *getWallRects();
-    const std::vector<PhysicsBody> *getWallBodies();
+    const std::vector<b2Body> *getWallBodies();
     int generate();
     int draw();
 };

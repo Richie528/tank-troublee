@@ -2,7 +2,7 @@
 
 #include <bits/stdc++.h>
 #include "raylib.h"
-#include "physac.h"
+#include "box2d/box2d.h"
 #include "action.hpp"
 
 const float moveSpeed = 100;
@@ -17,7 +17,6 @@ private:
     float rotation;
     int ammo;
     std::vector<Rectangle> tankRects;
-    PhysicsBody tankBody;
     std::map<Action, int> actionKeys;
 
     int move();
@@ -27,7 +26,6 @@ private:
 public:
     Tank(float posX, float posY, float rotation, Color colour, std::vector<int> inputKeys);
     const std::vector<Rectangle> *getTankRects();
-    const PhysicsBody *getTankBody();
     int run();
     int draw();
 };

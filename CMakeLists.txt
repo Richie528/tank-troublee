@@ -1,31 +1,39 @@
 cmake_minimum_required(VERSION 3.12)
 project(tank-troublee)
 
+include(FetchContent)
+
 # Generate compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Dependencies
-set(RAYLIB_VERSION 5.0)
-find_package(raylib ${RAYLIB_VERSION} QUIET) # QUIET or REQUIRED
-if (NOT raylib_FOUND) # If there's none, fetch and build raylib
-  include(FetchContent)
-  FetchContent_Declare(
-    raylib
-    DOWNLOAD_EXTRACT_TIMESTAMP OFF
-    URL https://github.com/raysan5/raylib/archive/refs/tags/${RAYLIB_VERSION}.tar.gz
-  )
-  FetchContent_GetProperties(raylib)
-  if (NOT raylib_POPULATED) # Have we downloaded raylib yet?
-    set(FETCHCONTENT_QUIET NO)
-    FetchContent_Populate(raylib)
-    set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE) # don't build the supplied examples
-    add_subdirectory(${raylib_SOURCE_DIR} ${raylib_BINARY_DIR})
-  endif()
-endif()
+function(add_git_dependency libName gitURL gitTag)
+    FetchContent_Declare(${libName}
+        GIT_REPOSITORY ${gitURL}
+        GIT_TAG        ${gitTag}
+        GIT_SHALLOW    TRUE
+        GIT_PROGRESS   TRUE
+    )
+    FetchContent_MakeAvailable(${libName})
+    target_compile_options(${libName} PRIVATE "-w")
+endfunction()
 
-add_library(physac "physac/physac.c")
-target_include_directories(physac PRIVATE "physac/")
-target_link_libraries(physac PRIVATE raylib)
+# Add Raylib
+set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE) # don't build the supplied examples
+set(BUILD_GAMES    OFF CACHE BOOL "" FORCE) # don't build the supplied example games
+add_git_dependency(
+    raylib
+    https://github.com/raysan5/raylib.git
+    5.0
+)
+
+# Add Box2d
+set(BOX2D_BUILD_UNIT_TESTS OFF CACHE BOOL "" FORCE)
+set(BOX2D_BUILD_TESTBED OFF CACHE BOOL "" FORCE)
+add_git_dependency(
+    box2d
+    https://github.com/erincatto/box2d.git
+    v2.4.1
+)
 
 # Our Project
 add_executable(${PROJECT_NAME})
@@ -38,7 +46,6 @@ target_sources(${PROJECT_NAME} PRIVATE
 
 target_include_directories(${PROJECT_NAME} PRIVATE
   "src/include"
-  "physac/"
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
@@ -47,9 +54,11 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 add_custom_command(
 	TARGET ${PROJECT_NAME} POST_BUILD
 	COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/src/resources $<TARGET_FILE_DIR:${PROJECT_NAME}>/resources
-	DEPENDS ${PROJECT_NAME})
+	DEPENDS ${PROJECT_NAME}
+)
 
-target_link_libraries(${PROJECT_NAME} raylib physac)
+target_link_libraries(${PROJECT_NAME} raylib)
+target_link_libraries(${PROJECT_NAME} box2d)
 
 # Web Configurations
 if (${PLATFORM} STREQUAL "Web")

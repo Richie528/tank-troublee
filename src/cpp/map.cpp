@@ -8,7 +8,7 @@ const std::vector<Rectangle> *Map::getWallRects() {
     return &wallRects;
 }
 
-const std::vector<PhysicsBody> *Map::getWallBodies() {
+const std::vector<b2Body> *Map::getWallBodies() {
     return &wallBodies;
 }
 
@@ -100,10 +100,6 @@ int Map::generate() {
             }
         }
     }
-    // Create physics bodies
-    for (Rectangle wall : wallRects) {
-        wallBodies.push_back(CreatePhysicsBodyRectangle(Vector2{wall.x, wall.y}, wall.width, wall.height, 10));
-    }
     return 0;
 }
 
@@ -121,9 +117,6 @@ int Map::draw() {
     }
     for (Rectangle wall : wallRects) {
         DrawRectangleRec(wall, wallColour);
-    }
-    for (PhysicsBody body : wallBodies) {
-        body->enabled = false;
     }
     return 0;
 }
