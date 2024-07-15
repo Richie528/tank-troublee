@@ -8,10 +8,6 @@ const std::vector<Rectangle> *Map::getWallRects() {
     return &wallRects;
 }
 
-const std::vector<b2Body> *Map::getWallBodies() {
-    return &wallBodies;
-}
-
 float Map::f(int x) {
     return float(x + 3);
 }
@@ -99,6 +95,12 @@ int Map::generate() {
                 wallRects.push_back(newWall);
             }
         }
+    }
+    // Create physcis bodies
+    for (Rectangle wallRect : wallRects) {
+        b2BodyDef wallBodyDef;
+        wallBodyDef.position.Set(wallRect.x, wallRect.y);
+        b2Body* wallBody = world.CreateBody(&wallBodyDef);
     }
     return 0;
 }

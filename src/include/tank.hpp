@@ -3,6 +3,7 @@
 #include <bits/stdc++.h>
 #include "raylib.h"
 #include "box2d/box2d.h"
+#include "physics.hpp"
 #include "action.hpp"
 
 const float moveSpeed = 100;

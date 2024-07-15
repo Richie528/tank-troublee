@@ -2,6 +2,7 @@
 #include "raylib.h"
 #include "box2d/box2d.h"
 
+#include "physics.hpp"
 #include "map.hpp"
 #include "tank.hpp"
 #include "bullet.hpp"
@@ -9,9 +10,6 @@
 int screenWidth = 808;
 int screenHeight = 808;
 float f(int x) {return float(x + 3);}
-
-b2Vec2 gravity(0.0f, 0.0f);
-b2World world(gravity);
 
 Map map;
 Tank tank = Tank(f(150), f(150), 90.0f, RED, {KEY_W, KEY_S, KEY_A, KEY_D, KEY_Q});
