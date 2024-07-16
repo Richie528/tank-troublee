@@ -38,18 +38,13 @@ int Tank::move() {
     float move = moveSpeed * (IsKeyDown(actionKeys[Action::forward]) - IsKeyDown(actionKeys[Action::backward]));
     float rotate = rotateSpeed * (IsKeyDown(actionKeys[Action::right]) - IsKeyDown(actionKeys[Action::left]));
 
-    rotation = std::fmod(rotation + rotate, 360);
+    rotation = tankBody->GetAngle();
 
-    int x = move * sin(rad(rotation));
-    int y = -move * cos(rad(rotation));
+    float x = move * sin(rotation);
+    float y = -move * cos(rotation);
 
-    tankBody->SetTransform(
-        b2Vec2{
-            tankBody->GetPosition().x + x,
-            tankBody->GetPosition().y + y
-        }, 
-        rad(rotation)
-    );
+    tankBody->SetAngularVelocity(rotate);
+    tankBody->SetLinearVelocity(b2Vec2{x, y});
 
     return 0;
 }
@@ -93,6 +88,12 @@ int Tank::draw() {
         drawPosition.x - (tankWidth / 2) * cos(drawRotation) + (tankHeight / 2) * sin(drawRotation),
         drawPosition.y - (tankWidth / 2) * sin(drawRotation) - (tankHeight / 2) * cos(drawRotation)
     };
+
+    // std::cout << a.x << " ";
+    // std::cout << b.x << " ";
+    // std::cout << c.x << " ";
+    // std::cout << d.x << " ";
+    // std::cout << "\n";
 
     DrawLineEx(a, b, 2, colour);
     DrawLineEx(b, c, 2, colour);
