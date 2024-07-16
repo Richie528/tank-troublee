@@ -43,6 +43,14 @@ int Tank::move() {
     int x = move * sin(rad(rotation));
     int y = -move * cos(rad(rotation));
 
+    tankBody->SetTransform(
+        b2Vec2{
+            tankBody->GetPosition().x + x,
+            tankBody->GetPosition().y + y
+        }, 
+        rad(rotation)
+    );
+
     return 0;
 }
 
@@ -66,6 +74,30 @@ int Tank::run() {
 }
 
 int Tank::draw() {
+    b2Vec2 drawPosition = tankBody->GetPosition();
+    float drawRotation = tankBody->GetAngle();
+
+    Vector2 a = Vector2{
+        drawPosition.x - (tankWidth / 2) * cos(drawRotation) - (tankHeight / 2) * sin(drawRotation),
+        drawPosition.y - (tankWidth / 2) * sin(drawRotation) + (tankHeight / 2) * cos(drawRotation)
+    };
+    Vector2 b = Vector2{
+        drawPosition.x + (tankWidth / 2) * cos(drawRotation) - (tankHeight / 2) * sin(drawRotation),
+        drawPosition.y + (tankWidth / 2) * sin(drawRotation) + (tankHeight / 2) * cos(drawRotation)
+    };
+    Vector2 c = Vector2{
+        drawPosition.x + (tankWidth / 2) * cos(drawRotation) + (tankHeight / 2) * sin(drawRotation),
+        drawPosition.y + (tankWidth / 2) * sin(drawRotation) - (tankHeight / 2) * cos(drawRotation)
+    };
+    Vector2 d = Vector2{
+        drawPosition.x - (tankWidth / 2) * cos(drawRotation) + (tankHeight / 2) * sin(drawRotation),
+        drawPosition.y - (tankWidth / 2) * sin(drawRotation) - (tankHeight / 2) * cos(drawRotation)
+    };
+
+    DrawLineEx(a, b, 2, colour);
+    DrawLineEx(b, c, 2, colour);
+    DrawLineEx(c, d, 2, colour);
+    DrawLineEx(d, a, 2, colour);
 
     return 0;
 }

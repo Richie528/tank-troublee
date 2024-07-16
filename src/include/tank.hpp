@@ -5,7 +5,7 @@
 #include "box2d/box2d.h"
 #include "action.hpp"
 
-const float moveSpeed = 100;
+const float moveSpeed = 2;
 const float rotateSpeed = 2.5;
 const int tankWidth = 30;
 const int tankHeight = 40;
