@@ -7,8 +7,8 @@
 
 const float moveSpeed = 100;
 const float rotateSpeed = 2.5;
-const int tankWidth = 30;
-const int tankHeight = 40;
+const float tankWidth = 30;
+const float tankHeight = 40;
 
 class Tank {
 private:

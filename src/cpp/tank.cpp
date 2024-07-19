@@ -20,7 +20,7 @@ Tank::Tank(b2World* world, float posX, float posY, float rot, Color col, std::ve
     tankBody = world->CreateBody(&tankBodyDef);
 
     b2PolygonShape tankBox;
-    tankBox.SetAsBox(tankHeight, tankWidth);
+    tankBox.SetAsBox(tankHeight / 2, tankWidth / 2);
 
     b2FixtureDef tankFixtureDef;
     tankFixtureDef.shape = &tankBox;
@@ -38,13 +38,26 @@ int Tank::move() {
     float move = moveSpeed * (IsKeyDown(actionKeys[Action::forward]) - IsKeyDown(actionKeys[Action::backward]));
     float rotate = rotateSpeed * (IsKeyDown(actionKeys[Action::right]) - IsKeyDown(actionKeys[Action::left]));
 
+    b2Vec2 currentVel = tankBody->GetLinearVelocity();
+    b2Vec2 targetVel = {
+        move * sin(rotation),
+        -move * cos(rotation)
+    };
+    b2Vec2 changeVel = targetVel - currentVel;
+    b2Vec2 force = b2Vec2{
+        tankBody->GetMass() * changeVel.x,
+        tankBody->GetMass() * changeVel.y
+    };
+
     rotation = tankBody->GetAngle();
 
-    float x = move * sin(rotation);
-    float y = -move * cos(rotation);
+    // float x = move * sin(rotation);
+    // float y = -move * cos(rotation);
+
+    tankBody->ApplyLinearImpulse(force, tankBody->GetWorldCenter(), true);
 
     tankBody->SetAngularVelocity(rotate);
-    tankBody->SetLinearVelocity(b2Vec2{x, y});
+    // tankBody->SetLinearVelocity(b2Vec2{x, y});
 
     return 0;
 }
@@ -88,12 +101,6 @@ int Tank::draw() {
         drawPosition.x - (tankWidth / 2) * cos(drawRotation) + (tankHeight / 2) * sin(drawRotation),
         drawPosition.y - (tankWidth / 2) * sin(drawRotation) - (tankHeight / 2) * cos(drawRotation)
     };
-
-    // std::cout << a.x << " ";
-    // std::cout << b.x << " ";
-    // std::cout << c.x << " ";
-    // std::cout << d.x << " ";
-    // std::cout << "\n";
 
     DrawLineEx(a, b, 2, colour);
     DrawLineEx(b, c, 2, colour);

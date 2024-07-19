@@ -7,8 +7,8 @@
 #include "bullet.hpp"
 
 const float timeStep = 1.0f / 60.0f;
-const int32 velocityIterations = 6;
-const int32 positionIterations = 2;
+const int32 velocityIterations = 16;
+const int32 positionIterations = 8;
 const int screenWidth = 808;
 const int screenHeight = 808;
 float f(int x) {return float(x + 3);}

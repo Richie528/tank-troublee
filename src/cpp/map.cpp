@@ -85,23 +85,23 @@ int Map::generate(b2World* world) {
                 };
                 wallRects.push_back(newWall);
 
-                // Physics body
-                b2BodyDef wallBodyDef;
-                wallBodyDef.position = b2Vec2{
-                    f(j * 100),
-                    f(i * 100),
-                };
+                // // Physics body
+                // b2BodyDef wallBodyDef;
+                // wallBodyDef.position = b2Vec2{
+                //     f(j * 100),
+                //     f(i * 100 + 50),
+                // };
 
-                b2Body* wallBody = world->CreateBody(&wallBodyDef);
+                // b2Body* wallBody = world->CreateBody(&wallBodyDef);
 
-                b2PolygonShape wallBox;
-                wallBox.SetAsBox(wallThickness, 100 + wallThickness);
+                // b2PolygonShape wallBox;
+                // wallBox.SetAsBox(wallThickness / 2, (100 + wallThickness) / 2);
 
-                b2FixtureDef wallFixtureDef;
-                wallFixtureDef.shape = &wallBox;
+                // b2FixtureDef wallFixtureDef;
+                // wallFixtureDef.shape = &wallBox;
                 
-                wallBody->CreateFixture(&wallFixtureDef);
-                wallBodies.push_back(wallBody);
+                // wallBody->CreateFixture(&wallFixtureDef);
+                // wallBodies.push_back(wallBody);
             }
         }
     }
@@ -118,28 +118,28 @@ int Map::generate(b2World* world) {
             }
         }
     }
-    // // Create physcis bodies
-    // for (Rectangle wallRect : wallRects) {
-    //     b2BodyDef wallBodyDef;
-    //     wallBodyDef.position = b2Vec2{
-    //         wallRect.x + wallRect.width / 2, 
-    //         wallRect.y + wallRect.height / 2
-    //         // 200, 200
-    //     };
+    // Create physcis bodies
+    for (Rectangle wallRect : wallRects) {
+        b2BodyDef wallBodyDef;
+        wallBodyDef.position = b2Vec2{
+            wallRect.x + wallRect.width / 2, 
+            wallRect.y + wallRect.height / 2
+        };
 
-    //     b2Body* wallBody = world->CreateBody(&wallBodyDef);
+        b2Body* wallBody = world->CreateBody(&wallBodyDef);
 
-    //     b2PolygonShape wallBox;
-    //     std::cout << wallRect.x << " " << wallRect.y << " --- ";
-    //     std::cout << wallRect.width << " " << wallRect.height << "\n";
-    //     wallBox.SetAsBox(wallRect.width, wallRect.height);
+        b2PolygonShape wallBox;
+        wallBox.SetAsBox(
+            wallRect.width / 2 + wallBuffer, 
+            wallRect.height / 2 + wallBuffer
+        );
 
-    //     b2FixtureDef wallFixtureDef;
-    //     wallFixtureDef.shape = &wallBox;
+        b2FixtureDef wallFixtureDef;
+        wallFixtureDef.shape = &wallBox;
         
-    //     wallBody->CreateFixture(&wallFixtureDef);
-    //     wallBodies.push_back(wallBody);
-    // }
+        wallBody->CreateFixture(&wallFixtureDef);
+        wallBodies.push_back(wallBody);
+    }
     return 0;
 }
 
@@ -157,14 +157,6 @@ int Map::draw() {
     }
     for (Rectangle wall : wallRects) {
         DrawRectangleRec(wall, wallColour);
-    }
-
-    // TESTING
-    for (b2Body* wallBody : wallBodies) {
-        b2Vec2 drawPosition = wallBody->GetPosition();
-        float drawRotation = wallBody->GetAngle();
-
-        DrawCircle(drawPosition.x, drawPosition.y, 2.0f, RED);
     }
 
     return 0;
