@@ -84,24 +84,6 @@ int Map::generate(b2World* world) {
                     f(100 + wallThickness)
                 };
                 wallRects.push_back(newWall);
-
-                // // Physics body
-                // b2BodyDef wallBodyDef;
-                // wallBodyDef.position = b2Vec2{
-                //     f(j * 100),
-                //     f(i * 100 + 50),
-                // };
-
-                // b2Body* wallBody = world->CreateBody(&wallBodyDef);
-
-                // b2PolygonShape wallBox;
-                // wallBox.SetAsBox(wallThickness / 2, (100 + wallThickness) / 2);
-
-                // b2FixtureDef wallFixtureDef;
-                // wallFixtureDef.shape = &wallBox;
-                
-                // wallBody->CreateFixture(&wallFixtureDef);
-                // wallBodies.push_back(wallBody);
             }
         }
     }
@@ -122,16 +104,16 @@ int Map::generate(b2World* world) {
     for (Rectangle wallRect : wallRects) {
         b2BodyDef wallBodyDef;
         wallBodyDef.position = b2Vec2{
-            wallRect.x + wallRect.width / 2, 
-            wallRect.y + wallRect.height / 2
+            (wallRect.x + wallRect.width / 2) * physicsScale, 
+            (wallRect.y + wallRect.height / 2) * physicsScale
         };
 
         b2Body* wallBody = world->CreateBody(&wallBodyDef);
 
         b2PolygonShape wallBox;
         wallBox.SetAsBox(
-            wallRect.width / 2 + wallBuffer, 
-            wallRect.height / 2 + wallBuffer
+            (wallRect.width / 2 + wallBuffer) * physicsScale, 
+            (wallRect.height / 2 + wallBuffer) * physicsScale
         );
 
         b2FixtureDef wallFixtureDef;

@@ -16,11 +16,17 @@ Tank::Tank(b2World* world, float posX, float posY, float rot, Color col, std::ve
 
     b2BodyDef tankBodyDef;
     tankBodyDef.type = b2_dynamicBody;
-    tankBodyDef.position.Set(pos.x, pos.y);
+    tankBodyDef.position.Set(
+        pos.x * physicsScale, 
+        pos.y * physicsScale
+    );
     tankBody = world->CreateBody(&tankBodyDef);
 
     b2PolygonShape tankBox;
-    tankBox.SetAsBox(tankHeight / 2, tankWidth / 2);
+    tankBox.SetAsBox(
+        (tankHeight / 2) * physicsScale, 
+        (tankWidth / 2) * physicsScale
+    );
 
     b2FixtureDef tankFixtureDef;
     tankFixtureDef.shape = &tankBox;
@@ -86,20 +92,20 @@ int Tank::draw() {
     float drawRotation = tankBody->GetAngle();
 
     Vector2 a = Vector2{
-        drawPosition.x - (tankWidth / 2) * cos(drawRotation) - (tankHeight / 2) * sin(drawRotation),
-        drawPosition.y - (tankWidth / 2) * sin(drawRotation) + (tankHeight / 2) * cos(drawRotation)
+        drawPosition.x / physicsScale - (tankWidth / 2) * cos(drawRotation) - (tankHeight / 2) * sin(drawRotation),
+        drawPosition.y / physicsScale - (tankWidth / 2) * sin(drawRotation) + (tankHeight / 2) * cos(drawRotation)
     };
     Vector2 b = Vector2{
-        drawPosition.x + (tankWidth / 2) * cos(drawRotation) - (tankHeight / 2) * sin(drawRotation),
-        drawPosition.y + (tankWidth / 2) * sin(drawRotation) + (tankHeight / 2) * cos(drawRotation)
+        drawPosition.x / physicsScale + (tankWidth / 2) * cos(drawRotation) - (tankHeight / 2) * sin(drawRotation),
+        drawPosition.y / physicsScale + (tankWidth / 2) * sin(drawRotation) + (tankHeight / 2) * cos(drawRotation)
     };
     Vector2 c = Vector2{
-        drawPosition.x + (tankWidth / 2) * cos(drawRotation) + (tankHeight / 2) * sin(drawRotation),
-        drawPosition.y + (tankWidth / 2) * sin(drawRotation) - (tankHeight / 2) * cos(drawRotation)
+        drawPosition.x / physicsScale + (tankWidth / 2) * cos(drawRotation) + (tankHeight / 2) * sin(drawRotation),
+        drawPosition.y / physicsScale + (tankWidth / 2) * sin(drawRotation) - (tankHeight / 2) * cos(drawRotation)
     };
     Vector2 d = Vector2{
-        drawPosition.x - (tankWidth / 2) * cos(drawRotation) + (tankHeight / 2) * sin(drawRotation),
-        drawPosition.y - (tankWidth / 2) * sin(drawRotation) - (tankHeight / 2) * cos(drawRotation)
+        drawPosition.x / physicsScale - (tankWidth / 2) * cos(drawRotation) + (tankHeight / 2) * sin(drawRotation),
+        drawPosition.y / physicsScale - (tankWidth / 2) * sin(drawRotation) - (tankHeight / 2) * cos(drawRotation)
     };
 
     DrawLineEx(a, b, 2, colour);
