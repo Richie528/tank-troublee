@@ -4,9 +4,8 @@
 #include "raylib.h"
 #include "box2d/box2d.h"
 #include "action.hpp"
-#include "physics.hpp"
 
-const float moveSpeed = 10000;
+const float moveSpeed = 100;
 const float rotateSpeed = 2.5;
 const float tankWidth = 30;
 const float tankHeight = 40;

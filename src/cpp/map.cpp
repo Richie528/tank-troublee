@@ -104,16 +104,16 @@ int Map::generate(b2World* world) {
     for (Rectangle wallRect : wallRects) {
         b2BodyDef wallBodyDef;
         wallBodyDef.position = b2Vec2{
-            (wallRect.x + wallRect.width / 2) * physicsScale, 
-            (wallRect.y + wallRect.height / 2) * physicsScale
+            wallRect.x + wallRect.width / 2, 
+            wallRect.y + wallRect.height / 2
         };
 
         b2Body* wallBody = world->CreateBody(&wallBodyDef);
 
         b2PolygonShape wallBox;
         wallBox.SetAsBox(
-            (wallRect.width / 2 + wallBuffer) * physicsScale, 
-            (wallRect.height / 2 + wallBuffer) * physicsScale
+            wallRect.width / 2 + wallBuffer, 
+            wallRect.height / 2 + wallBuffer
         );
 
         b2FixtureDef wallFixtureDef;

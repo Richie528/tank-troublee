@@ -3,13 +3,12 @@
 #include <bits/stdc++.h>
 #include "raylib.h"
 #include "box2d/box2d.h"
-#include "physics.hpp"
 
 const float wallThickness = 6;
 const Color wallColour = {50, 50, 50, 255};
 const Color gridColourA = {240, 240, 240, 255};
 const Color gridColourB = {220, 220, 220, 255};
-const float wallBuffer = 3;
+const float wallBuffer = 5;
 
 class Map {
 private:
