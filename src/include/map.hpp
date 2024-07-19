@@ -3,6 +3,7 @@
 #include <bits/stdc++.h>
 #include "raylib.h"
 #include "box2d/box2d.h"
+#include "physics.hpp"
 
 const float wallThickness = 6;
 const Color wallColour = {50, 50, 50, 255};
@@ -30,3 +31,4 @@ public:
     int generate(b2World* world);
     int draw();
 };
+
